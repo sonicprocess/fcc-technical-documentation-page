@@ -1,0 +1,166 @@
+:target::before {
+  content: "";
+  display: block;
+  height: 100px; /* fixed header height*/
+  margin: -100px 0 0; /* negative fixed header height */
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+code {
+    font-family: 'Ubuntu Mono', monospace;;
+}
+
+.container {
+    max-width: 750px;
+}
+
+main {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    font-size: 1.25rem;
+    position: relative;
+    top: 150px;
+    overflow: auto;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    padding-top: .25rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 4px 4px #f7df1e;
+    margin-bottom: 2rem;
+    display: inline-block;
+    color: #f7df1e;
+    background-color: #212529;
+    background: linear-gradient(to right, #212529, #555 100%);
+}
+
+.navbar {
+    position: fixed; /* User Story #14 */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f7df1e;
+    z-index: 1000;
+}
+
+.navbar header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-brand {
+    color: #212529;
+}
+
+.navbar .navbar-toggler {
+    border-color: #212529;
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    color: #212529;
+    padding: 0.5em 1em;
+}
+
+.navbar .navbar-toggler:focus, 
+.navbar .navbar-toggler:hover {
+    background-color: #212529;
+    color: #f7df1e;
+}
+
+.navbar .navbar-collapse {
+    width: 100%;
+}
+
+.list-group {
+    display: block;
+    max-height: 245px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    border-right: none;
+    border-left: none;
+}
+
+.list-group-item.active {
+    color: #f7df1e;
+    background-color: #212529;
+    background: linear-gradient(to right, #212529, #555 100%);
+    border-color: #f7df1e;
+    font-weight: bold;
+}
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+    border-radius: 0;
+}
+
+.main-section {
+    margin-bottom: 6rem;
+}
+
+.code-toolbar {
+    margin-bottom: 1em;
+}
+
+@media (min-width: 375px) { /* User Story #15 */
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (min-width: 992px) { 
+    body {
+        display: flex;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        width: auto;
+        min-height: 100vh;
+    }
+    
+    .navbar .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+    
+    .list-group {
+        max-height: calc(100vh - 150px);
+        width: 100%;
+        margin-top: 0.5em;
+    }
+    
+    main {
+        margin-left: 21em;
+        top: 3.4em;
+    }
+}
